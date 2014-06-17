@@ -5,13 +5,11 @@ def sing_song(count)
     puts "You take one down, you pass it around!\n"
     count -= 1
     sing_song(count)
-  elsif count == 1
+  else
     puts "\n#{count} bottle of beer on the wall!"
     puts "#{count} bottle of beer!"
     puts "You take one down, you pass it around!"
     puts "\nNo more bottles of beer on the wall!"
-  else
-    exit()
   end
 
 end

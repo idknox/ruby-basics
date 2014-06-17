@@ -1,4 +1,3 @@
-
 def yell(response)
 
   if response == "exit"
@@ -10,6 +9,7 @@ def yell(response)
   end
 
   talk_to_grandma
+
 end
 
 def talk_to_grandma

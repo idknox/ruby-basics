@@ -1,6 +1,3 @@
-puts "I need to know how many bottles to sing!"
-puts "How many?"
-
 def sing_song(count)
   if count > 1
     puts "\n#{count} bottles of beer on the wall!"
@@ -16,7 +13,11 @@ def sing_song(count)
   else
     exit()
   end
+
 end
+
+puts "I need to know how many bottles to sing!"
+puts "How many?"
 
 input = gets.chomp
 count = input[5..-1].to_i

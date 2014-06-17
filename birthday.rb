@@ -4,7 +4,6 @@ def find_names(name, everyones_info)
     bday = everyones_info[(everyones_info.index(name))+1]
     year = bday[0..3]
     age = Time.new.year - year.to_i
-
   elsif name == "Exit"
     exit()
   else
@@ -14,6 +13,7 @@ def find_names(name, everyones_info)
   puts "Name: #{name}"
   puts "Birthdate: #{bday}"
   puts "Age: #{age}"
+
 end
 
 puts "Pick a name, or use enter 'exit' to close the program"

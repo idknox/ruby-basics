@@ -1,17 +1,21 @@
 
-def get_response
-  puts "Please write something, or 'exit' to exit the program"
-  response = gets.chomp
+def yell(response)
+
   if response == "exit"
     exit()
   elsif response != response.upcase
-    puts "HUH?! SPEAK UP SONNY!"
+    puts "HUH?! SPEAK UP SONNY!\n"
   else
-    puts "NO, NOT SINCE #{rand(1930..1950)}!"
+    puts "\nNO, NOT SINCE #{rand(1930..1950)}!\n"
   end
-  get_response
+
+  talk_to_grandma
 end
 
-get_response
+def talk_to_grandma
+  puts "\nPlease write something, or 'exit' to close the program: "
+  response = gets.chomp
+  yell(response)
+end
 
-
+talk_to_grandma

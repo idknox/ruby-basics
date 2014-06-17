@@ -20,7 +20,7 @@ end
 
 input = gets.chomp
 count = input[5..-1].to_i
-if (count > 99 || count < 1) || (input != "sing " + count.to_s)
+if ( count < 1 || count > 99) || (input != "sing " + count.to_s)
   puts "Incorrect input. Program will now exit."
 else
   sing_song(count)

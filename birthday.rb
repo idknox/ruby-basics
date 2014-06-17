@@ -1,30 +1,30 @@
-def find_names
+def find_names(name, everyones_info)
 
-  puts "Type 'exit' and ENTER to close the program, or enter your name: "
-
-  name = gets.chomp.capitalize
-
-  filename = 'birthday_data.csv'
-
-  txt = File.read filename
-
-  birthday_info = txt.split(',')
-
-  i = 0
-
-  if birthday_info.include?(name)
-    b = birthday_info[(birthday_info.index(name))+1]
-    year = b[0..3]
+  if everyones_info.include?(name)
+    bday = everyones_info[(everyones_info.index(name))+1]
+    year = bday[0..3]
     age = Time.new.year - year.to_i
-    puts name + " " + b + " " + age.to_s
+
   elsif name == "Exit"
     exit()
   else
     puts "That name is not on the list"
   end
 
-  i += 1
-  find_names
+  puts "Name: #{name}"
+  puts "Birthdate: #{bday}"
+  puts "Age: #{age}"
 end
 
-find_names
+puts "Pick a name, or use enter 'exit' to close the program"
+
+name = gets.chomp.capitalize
+
+filename = 'birthday_data.csv'
+
+txt = File.read filename
+
+everyones_info = txt.split(',')
+
+find_names(name, everyones_info)
+

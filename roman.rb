@@ -1,13 +1,9 @@
 def card_to_roman(x, num_hash)
   roman = ""
   while x > 0
-    num_hash.keys.each do |v|
-      if (x/v) > 0
-        x -= v
-        roman += num_hash.fetch(v)
-        break
-      end
-    end
+    v = (num_hash.keys).detect {|v| x/v > 0 }
+    x -= v
+    roman += num_hash.fetch(v)
   end
 
   return roman
